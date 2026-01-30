@@ -1,0 +1,454 @@
+{
+  "phrases": [
+    {
+      "id": "phrase-001",
+      "mandarin": {
+        "characters_simplified": "放松一下",
+        "characters_traditional": "放鬆一下",
+        "pinyin": "fàng sōng yī xià"
+      },
+      "cantonese": {
+        "characters_traditional": "放鬆一下",
+        "jyutping": "fong3 sung1 jat1 haa6"
+      },
+      "english": "Take a moment to relax.",
+      "context": "A short prompt to pause and release tension.",
+      "tags": ["calm","breathing"]
+    },
+    {
+      "id": "phrase-002",
+      "mandarin": {
+        "characters_simplified": "深呼吸",
+        "characters_traditional": "深呼吸",
+        "pinyin": "shēn hū xī"
+      },
+      "cantonese": {
+        "characters_traditional": "深呼吸",
+        "jyutping": "sam1 fu1 kap1"
+      },
+      "english": "Take a deep breath.",
+      "context": "Use for grounding when you feel scattered.",
+      "tags": ["breathing","grounding"]
+    },
+    {
+      "id": "phrase-003",
+      "mandarin": {
+        "characters_simplified": "心平气和",
+        "characters_traditional": "心平氣和",
+        "pinyin": "xīn píng qì hé"
+      },
+      "cantonese": {
+        "characters_traditional": "心平氣和",
+        "jyutping": "sam1 ping4 hei3 wo4"
+      },
+      "english": "Keep a calm and even heart.",
+      "context": "A gentle reminder to stay composed.",
+      "tags": ["calm","self-regulation"]
+    },
+    {
+      "id": "phrase-004",
+      "mandarin": {
+        "characters_simplified": "一切都会好",
+        "characters_traditional": "一切都會好",
+        "pinyin": "yī qiè dōu huì hǎo"
+      },
+      "cantonese": {
+        "characters_traditional": "一切都會好",
+        "jyutping": "jat1 cit3 dou1 wui5 hou2"
+      },
+      "english": "Everything will be okay.",
+      "context": "Comforting reassurance during stress.",
+      "tags": ["reassurance","calm"]
+    },
+    {
+      "id": "phrase-005",
+      "mandarin": {
+        "characters_simplified": "此刻就是安全的",
+        "characters_traditional": "此刻就是安全的",
+        "pinyin": "cǐ kè jiù shì ān quán de"
+      },
+      "cantonese": {
+        "characters_traditional": "此刻就是安全的",
+        "jyutping": "ci2 hak1 zau6 si6 on1 cyun4 dik1"
+      },
+      "english": "This moment is safe.",
+      "context": "Grounding line for acute stress or worry.",
+      "tags": ["grounding","safety"]
+    },
+    {
+      "id": "phrase-006",
+      "mandarin": {
+        "characters_simplified": "慢慢来",
+        "characters_traditional": "慢慢來",
+        "pinyin": "màn màn lái"
+      },
+      "cantonese": {
+        "characters_traditional": "慢慢來",
+        "jyutping": "maan6 maan6 loi4"
+      },
+      "english": "Take it slowly.",
+      "context": "A reminder to pace yourself and be patient.",
+      "tags": ["patience","calm"]
+    },
+    {
+      "id": "phrase-007",
+      "mandarin": {
+        "characters_simplified": "接纳自己的感觉",
+        "characters_traditional": "接納自己的感覺",
+        "pinyin": "jiē nà zì jǐ de gǎn jué"
+      },
+      "cantonese": {
+        "characters_traditional": "接納自己的感覺",
+        "jyutping": "zip3 naap6 zi6 gei2 dik1 gam2 gok3"
+      },
+      "english": "Accept your feelings.",
+      "context": "Encourages self-compassion with current emotions.",
+      "tags": ["self-compassion","acceptance"]
+    },
+    {
+      "id": "phrase-008",
+      "mandarin": {
+        "characters_simplified": "我在这里",
+        "characters_traditional": "我在這裡",
+        "pinyin": "wǒ zài zhè lǐ"
+      },
+      "cantonese": {
+        "characters_traditional": "我喺呢度",
+        "jyutping": "ngo5 hai2 ni1 dou6"
+      },
+      "english": "I am here (present).",
+      "context": "A simple grounding phrase for presence.",
+      "tags": ["presence","grounding"]
+    },
+    {
+      "id": "phrase-009",
+      "mandarin": {
+        "characters_simplified": "感恩当下",
+        "characters_traditional": "感恩當下",
+        "pinyin": "gǎn ēn dāng xià"
+      },
+      "cantonese": {
+        "characters_traditional": "感恩當下",
+        "jyutping": "gam2 jan1 dong1 haa6"
+      },
+      "english": "Be grateful for this moment.",
+      "context": "A short gratitude prompt to reframe the mind.",
+      "tags": ["gratitude","mindfulness"]
+    },
+    {
+      "id": "phrase-010",
+      "mandarin": {
+        "characters_simplified": "让思绪流走",
+        "characters_traditional": "讓思緒流走",
+        "pinyin": "ràng sī xù liú zǒu"
+      },
+      "cantonese": {
+        "characters_traditional": "讓思緒流走",
+        "jyutping": "joeng6 si1 ceoi3 lau4 zau2"
+      },
+      "english": "Let your thoughts flow away.",
+      "context": "Use when intrusive thoughts feel stuck.",
+      "tags": ["letting-go","calm"]
+    },
+    {
+      "id": "phrase-011",
+      "mandarin": {
+        "characters_simplified": "把注意力带回呼吸",
+        "characters_traditional": "把注意力帶回呼吸",
+        "pinyin": "bǎ zhù yì lì dài huí hū xī"
+      },
+      "cantonese": {
+        "characters_traditional": "把注意力帶回呼吸",
+        "jyutping": "baa2 zyu3 ji3 lik6 daai3 wui4 fu1 kap1"
+      },
+      "english": "Bring your attention back to the breath.",
+      "context": "A mindful redirection cue for anxiety or distraction.",
+      "tags": ["mindfulness","breathing"]
+    },
+    {
+      "id": "phrase-012",
+      "mandarin": {
+        "characters_simplified": "呼气放下",
+        "characters_traditional": "呼氣放下",
+        "pinyin": "hū qì fàng xià"
+      },
+      "cantonese": {
+        "characters_traditional": "呼氣放下",
+        "jyutping": "fu1 hei3 fong3 haa6"
+      },
+      "english": "Exhale and let it go.",
+      "context": "A short breathing cue to release tension.",
+      "tags": ["breathing","letting-go"]
+    },
+    {
+      "id": "phrase-013",
+      "mandarin": {
+        "characters_simplified": "温柔对待自己",
+        "characters_traditional": "溫柔對待自己",
+        "pinyin": "wēn róu duì dài zì jǐ"
+      },
+      "cantonese": {
+        "characters_traditional": "溫柔對待自己",
+        "jyutping": "wan1 jau4 deoi3 doi6 zi6 gei2"
+      },
+      "english": "Be gentle with yourself.",
+      "context": "A compassionate reminder during self-criticism.",
+      "tags": ["self-compassion","calm"]
+    },
+    {
+      "id": "phrase-014",
+      "mandarin": {
+        "characters_simplified": "每一步都算数",
+        "characters_traditional": "每一步都算數",
+        "pinyin": "měi yī bù dōu suàn shù"
+      },
+      "cantonese": {
+        "characters_traditional": "每一步都算數",
+        "jyutping": "mui5 jat1 bou6 dou1 syun3 sou3"
+      },
+      "english": "Every step counts.",
+      "context": "Motivation to acknowledge small progress.",
+      "tags": ["encouragement","progress"]
+    },
+    {
+      "id": "phrase-015",
+      "mandarin": {
+        "characters_simplified": "回到当下",
+        "characters_traditional": "回到當下",
+        "pinyin": "huí dào dāng xià"
+      },
+      "cantonese": {
+        "characters_traditional": "回到當下",
+        "jyutping": "wui4 dou3 dong1 haa6"
+      },
+      "english": "Return to the present moment.",
+      "context": "A quick cue to anchor your awareness.",
+      "tags": ["mindfulness","presence"]
+    },
+    {
+      "id": "phrase-016",
+      "mandarin": {
+        "characters_simplified": "身心平衡",
+        "characters_traditional": "身心平衡",
+        "pinyin": "shēn xīn píng héng"
+      },
+      "cantonese": {
+        "characters_traditional": "身心平衡",
+        "jyutping": "san1 sam1 ping4 hang4"
+      },
+      "english": "Balance body and mind.",
+      "context": "A gentle reminder to check in with both body and mind.",
+      "tags": ["balance","wellbeing"]
+    },
+    {
+      "id": "phrase-017",
+      "mandarin": {
+        "characters_simplified": "今天已经足够好了",
+        "characters_traditional": "今天已經足夠好了",
+        "pinyin": "jīn tiān yǐ jīng zú gòu le"
+      },
+      "cantonese": {
+        "characters_traditional": "今天已經足夠好了",
+        "jyutping": "gam1 tin1 ji5 ging1 zuk1 gau3 liu5"
+      },
+      "english": "Today has been enough.",
+      "context": "A reassurance for overworking or perfectionism.",
+      "tags": ["self-acceptance","calm"]
+    },
+    {
+      "id": "phrase-018",
+      "mandarin": {
+        "characters_simplified": "允许自己休息",
+        "characters_traditional": "允許自己休息",
+        "pinyin": "yǔn xǔ zì jǐ xiū xī"
+      },
+      "cantonese": {
+        "characters_traditional": "允許自己休息",
+        "jyutping": "wan2 heoi2 zi6 gei2 jau1 sik1"
+      },
+      "english": "Allow yourself to rest.",
+      "context": "Permission to pause and recover.",
+      "tags": ["rest","self-care"]
+    },
+    {
+      "id": "phrase-019",
+      "mandarin": {
+        "characters_simplified": "我值得被善待",
+        "characters_traditional": "我值得被善待",
+        "pinyin": "wǒ zhí dé bèi shàn dài"
+      },
+      "cantonese": {
+        "characters_traditional": "我值得被善待",
+        "jyutping": "ngo5 zik1 dak1 bei6 sin6 doi6"
+      },
+      "english": "I deserve kindness.",
+      "context": "A self-worth affirmation for difficult moments.",
+      "tags": ["affirmation","self-worth"]
+    },
+    {
+      "id": "phrase-020",
+      "mandarin": {
+        "characters_simplified": "安静一下",
+        "characters_traditional": "安靜一下",
+        "pinyin": "ān jìng yī xià"
+      },
+      "cantonese": {
+        "characters_traditional": "安靜一下",
+        "jyutping": "on1 zing6 jat1 haa6"
+      },
+      "english": "Be quiet for a moment.",
+      "context": "A short invitation to silence and calm.",
+      "tags": ["calm","pause"]
+    },
+    {
+      "id": "phrase-021",
+      "mandarin": {
+        "characters_simplified": "简单而完整",
+        "characters_traditional": "簡單而完整",
+        "pinyin": "jiǎn dān ér wán zhěng"
+      },
+      "cantonese": {
+        "characters_traditional": "簡單而完整",
+        "jyutping": "gaan2 daan1 ji4 jyun4 zing2"
+      },
+      "english": "Simple and whole.",
+      "context": "A reminder that simplicity can be complete.",
+      "tags": ["perspective","calm"]
+    },
+    {
+      "id": "phrase-022",
+      "mandarin": {
+        "characters_simplified": "让阳光照进来",
+        "characters_traditional": "讓陽光照進來",
+        "pinyin": "ràng yáng guāng zhào jìn lái"
+      },
+      "cantonese": {
+        "characters_traditional": "讓陽光照進來",
+        "jyutping": "joeng6 joeng4 gwong1 ziu3 zeon3 loi4"
+      },
+      "english": "Let the sunlight in.",
+      "context": "Metaphor for allowing warmth and hope.",
+      "tags": ["hope","calm"]
+    },
+    {
+      "id": "phrase-023",
+      "mandarin": {
+        "characters_simplified": "心安就是归处",
+        "characters_traditional": "心安就是歸處",
+        "pinyin": "xīn ān jiù shì guī chù"
+      },
+      "cantonese": {
+        "characters_traditional": "心安就是歸處",
+        "jyutping": "sam1 on1 zau6 si6 gwai1 cyu3"
+      },
+      "english": "A peaceful heart is home.",
+      "context": "A poetic reminder that calm is a refuge.",
+      "tags": ["calm","metaphor"]
+    },
+    {
+      "id": "phrase-024",
+      "mandarin": {
+        "characters_simplified": "放下评判",
+        "characters_traditional": "放下評判",
+        "pinyin": "fàng xià píng pàn"
+      },
+      "cantonese": {
+        "characters_traditional": "放下評判",
+        "jyutping": "fong3 haa6 ping4 pun3"
+      },
+      "english": "Release judgment.",
+      "context": "Encourages curiosity over harsh judgment.",
+      "tags": ["acceptance","self-compassion"]
+    },
+    {
+      "id": "phrase-025",
+      "mandarin": {
+        "characters_simplified": "小目标，大进步",
+        "characters_traditional": "小目標，大進步",
+        "pinyin": "xiǎo mù biāo, dà jìn bù"
+      },
+      "cantonese": {
+        "characters_traditional": "小目標，大進步",
+        "jyutping": "siu2 muk6 biu1, daai6 zeon3 bou6"
+      },
+      "english": "Small goals, big progress.",
+      "context": "Encouragement to focus on manageable steps.",
+      "tags": ["motivation","progress"]
+    },
+    {
+      "id": "phrase-026",
+      "mandarin": {
+        "characters_simplified": "感受此刻的温度",
+        "characters_traditional": "感受此刻的溫度",
+        "pinyin": "gǎn shòu cǐ kè de wēn dù"
+      },
+      "cantonese": {
+        "characters_traditional": "感受此刻的溫度",
+        "jyutping": "gam2 sau6 ci2 hak1 dik1 wan1 dou6"
+      },
+      "english": "Feel the temperature of this moment.",
+      "context": "A sensory prompt to bring attention to now.",
+      "tags": ["mindfulness","senses"]
+    },
+    {
+      "id": "phrase-027",
+      "mandarin": {
+        "characters_simplified": "逐渐松开紧张",
+        "characters_traditional": "逐漸鬆開緊張",
+        "pinyin": "zhú jiàn sōng kāi jǐn zhāng"
+      },
+      "cantonese": {
+        "characters_traditional": "逐漸鬆開緊張",
+        "jyutping": "zuk6 zin2 sung1 hoi1 gan2 zoeng1"
+      },
+      "english": "Slowly release tension.",
+      "context": "Use during progressive relaxation.",
+      "tags": ["relaxation","breathing"]
+    },
+    {
+      "id": "phrase-028",
+      "mandarin": {
+        "characters_simplified": "我接纳现在的自己",
+        "characters_traditional": "我接納現在的自己",
+        "pinyin": "wǒ jiē nà xiàn zài de zì jǐ"
+      },
+      "cantonese": {
+        "characters_traditional": "我接納現在的自己",
+        "jyutping": "ngo5 zip3 naap6 jin6 zoi6 dik1 zi6 gei2"
+      },
+      "english": "I accept myself in this moment.",
+      "context": "A self-acceptance affirmation.",
+      "tags": ["self-compassion","affirmation"]
+    },
+    {
+      "id": "phrase-029",
+      "mandarin": {
+        "characters_simplified": "做一件小事，关怀自己",
+        "characters_traditional": "做一件小事，關懷自己",
+        "pinyin": "zuò yī jiàn xiǎo shì, guān huái zì jǐ"
+      },
+      "cantonese": {
+        "characters_traditional": "做一件小事，關懷自己",
+        "jyutping": "zou6 jat1 gin6 siu2 si6, gwaan1 wai4 zi6 gei2"
+      },
+      "english": "Do one small thing to care for yourself.",
+      "context": "Encourages actionable self-care.",
+      "tags": ["self-care","action"]
+    },
+    {
+      "id": "phrase-030",
+      "mandarin": {
+        "characters_simplified": "我深深呼吸，恢复力量",
+        "characters_traditional": "我深深呼吸，恢復力量",
+        "pinyin": "wǒ shēn shēn hū xī, huī fù lì liàng"
+      },
+      "cantonese": {
+        "characters_traditional": "我深深呼吸，恢復力量",
+        "jyutping": "ngo5 sam1 sam1 fu1 kap1, fui1 fuk6 lik6 loeng6"
+      },
+      "english": "I breathe deeply and restore my strength.",
+      "context": "A gentle affirmation to recover energy.",
+      "tags": ["breathing","affirmation"]
+    }
+  ]
+}

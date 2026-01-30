@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CalmPhrases — Phrase Card Example</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card" role="article" aria-label="Calming phrase">
+      <div class="languages">
+        <div class="col mandarin" aria-label="Mandarin">
+          <div class="label">Mandarin</div>
+          <div class="chars" id="mandarin-chars">放松一下</div>
+          <div class="romanization" id="mandarin-pinyin">fàng sōng yī xià</div>
+          <button class="play" aria-label="Play Mandarin">🔊</button>
+        </div>
+
+        <div class="col cantonese" aria-label="Cantonese">
+          <div class="label">Cantonese</div>
+          <div class="chars" id="cantonese-chars">放鬆一下</div>
+          <div class="romanization" id="cantonese-jyutping">fong3 sung1 jat1 haa6</div>
+          <button class="play" aria-label="Play Cantonese">🔊</button>
+        </div>
+      </div>
+
+      <div class="english" id="english-translation" aria-live="polite">
+        <div class="translation">Take a moment to relax.</div>
+        <div class="context">Use when you need a quick pause.</div>
+      </div>
+
+      <div class="controls">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+        <button id="fav">♡ Favorite</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="tts.js"></script>
+  <script>
+    // Example: wire up the play buttons to speak using the helper in tts.js
+    document.querySelectorAll('.col .play').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const parent = btn.closest('.col');
+        if (parent.classList.contains('mandarin')) {
+          ttsSpeak({ text: document.getElementById('mandarin-chars').textContent, lang: 'zh-CN' });
+        } else {
+          ttsSpeak({ text: document.getElementById('cantonese-chars').textContent, lang: 'yue' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CalmPhrases Phrase Schema",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "mandarin": {
+      "type": "object",
+      "properties": {
+        "characters_simplified": { "type": "string" },
+        "characters_traditional": { "type": "string" },
+        "pinyin": { "type": "string" }
+      },
+      "required": ["characters_simplified", "characters_traditional"]
+    },
+    "cantonese": {
+      "type": "object",
+      "properties": {
+        "characters_traditional": { "type": "string" },
+        "jyutping": { "type": "string" }
+      },
+      "required": ["characters_traditional"]
+    },
+    "english": { "type": "string" },
+    "context": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "vetted_by": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "audio": {
+      "type": "object",
+      "properties": {
+        "mandarin_url": { "type": "string" },
+        "cantonese_url": { "type": "string" }
+      }
+    }
+  },
+  "required": ["id", "mandarin", "cantonese", "english"]
+}
