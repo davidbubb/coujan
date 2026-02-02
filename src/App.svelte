@@ -90,8 +90,8 @@
 
     <div class="controls-top">
       <div class="left-controls">
-        <label class="small">Mandarin</label>
-        <select bind:value={mandarinScript} on:change={() => setMandarinScript(mandarinScript)}>
+        <label class="small" for="mandy">Mandarin</label>
+        <select id="mandy" bind:value={mandarinScript} on:change={() => setMandarinScript(mandarinScript)}>
           <option value="simplified">Simplified</option>
           <option value="traditional">Traditional</option>
         </select>
