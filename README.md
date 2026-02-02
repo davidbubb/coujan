@@ -10,6 +10,8 @@ Run locally:
 
 3. Open http://localhost:5173 (or the URL shown by Vite)
 
+Deployed to GitHub pages
+
 Notes:
 - TTS uses your browser's Web Speech API. Cantonese voice availability varies by browser/OS — if none available, the browser may fallback to a Mandarin voice.
 - Preferences and favorites are stored in localStorage.
