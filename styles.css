@@ -85,7 +85,65 @@ body{
   .chars{font-size:44px}
 }
 
+/* ambient animated background (more visible) */
+body{position:relative;overflow:hidden}
+body::before{
+  content:"";
+  position:absolute;
+  inset:-25%;
+  background: linear-gradient(120deg, rgba(167,231,225,1), rgba(198,210,255,0.96) 45%, rgba(255,228,220,0.95));
+  background-size:200% 200%;
+  filter: blur(24px) saturate(115%);
+  opacity:0.52;
+  z-index:-2;
+  will-change:background-position,transform,opacity;
+  animation:gradientShift 30s ease-in-out infinite;
+  pointer-events:none;
+}
+body::after{
+  content:"";
+  position:absolute;
+  inset:-35%;
+  background: radial-gradient(circle at 10% 18%, rgba(255,255,255,0.10), transparent 18%),
+              radial-gradient(circle at 82% 82%, rgba(255,248,240,0.08), transparent 22%);
+  z-index:-1;
+  opacity:0.72;
+  transform-origin:center;
+  will-change:transform,opacity;
+  animation:gentleFloat 26s ease-in-out infinite;
+  pointer-events:none;
+}
+/* subtle breathing overlay on the card for depth */
+.app,.card{position:relative;z-index:1}
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  z-index:0;
+  pointer-events:none;
+  transform-origin:center;
+  will-change:transform,opacity;
+  animation:cardBreath 18s ease-in-out infinite;
+}
+@keyframes gradientShift{
+  0%{background-position:0% 50%;transform:scale(1)}
+  50%{background-position:100% 50%;transform:scale(1.01)}
+  100%{background-position:0% 50%;transform:scale(1)}
+}
+@keyframes gentleFloat{
+  0%{transform:translate3d(-2%,-1%,0) scale(1);opacity:0.65}
+  50%{transform:translate3d(2%,1%,0) scale(1.02);opacity:0.78}
+  100%{transform:translate3d(-2%,-1%,0) scale(1);opacity:0.65}
+}
+@keyframes cardBreath{
+  0%{transform:scale(1);opacity:0.95}
+  50%{transform:scale(1.01);opacity:1}
+  100%{transform:scale(1);opacity:0.95}
+}
 /* reduced motion support */
 @media (prefers-reduced-motion: reduce){
+  body::before,body::after,.card::before{animation:none;opacity:0.35;filter:blur(18px)}
   *{animation:none!important;transition:none!important}
 }

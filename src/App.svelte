@@ -53,7 +53,7 @@
     const phrase = phrases[index];
     const text = phrase.cantonese.characters_traditional;
     // many browsers do not have 'yue' voices; try zh-HK / zh-CN fallback. Use 'yue' first.
-    ttsSpeak({ text, lang: 'yue' });
+    ttsSpeak({ text, lang: 'zh-HK' });
   }
 
   // keyboard navigation
@@ -86,8 +86,7 @@
 </script>
 
 <main class="app">
-  <section class="card" role="article" aria-label="Calming phrase"
-    on:touchstart={onTouchStart} on:touchend={onTouchEnd}>
+  <section class="card" role="article" aria-label="Calming phrase" on:touchstart={onTouchStart} on:touchend={onTouchEnd}>
 
     <div class="controls-top">
       <div class="left-controls">
@@ -103,7 +102,11 @@
 
       <div class="right-controls">
         <button class="fav" on:click={() => toggleFavorite(phrases[index].id)} aria-pressed={isFavorite(phrases[index].id)}>
-          {#if isFavorite(phrases[index].id)}★ Favorited{else}☆ Favorite{/if}
+          {#if isFavorite(phrases[index].id)}
+            ★ Favorited
+          {:else}
+            ☆ Favorite
+          {/if}
         </button>
       </div>
     </div>

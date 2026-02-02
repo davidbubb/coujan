@@ -539,6 +539,42 @@
       "vetted_by": "",
       "created_at": "2026-01-30T00:00:00Z",
       "audio": { "mandarin_url": "", "cantonese_url": "" }
+    },
+    {
+      "id": "phrase-031",
+      "mandarin": {
+        "characters_simplified": "如果我们从不直面它，就无法解决它",
+        "characters_traditional": "如果我們從不直面它，就無法解決它",
+        "pinyin": "Rúguǒ wǒmen cóng bù zhímiàn tā, jiù wúfǎ jiějué tā."
+      },
+      "cantonese": {
+        "characters_traditional": "如果我哋從來唔去面對佢，就冇辦法解決佢",
+        "jyutping": "Jyu4 gwo2 ngo5 dei6 cung4 loi4 m4 heoi3 min6 deoi3 keoi5, zau6 mou5 baan6 faat3 gaai2 kyut3 keoi5"
+      },
+      "english": "We can't fix it if we never face it.",
+      "context": "A reminder to tackle problems head-on.",
+      "tags": ["self-care","action"],
+      "vetted_by": "",
+      "created_at": "2026-01-30T00:00:00Z",
+      "audio": { "mandarin_url": "", "cantonese_url": "" }
+    },
+    {
+      "id": "phrase-032",
+      "mandarin": {
+        "characters_simplified": "放过自己",
+        "characters_traditional": "放過自己",
+        "pinyin": "Fàngguò zìjǐ"
+      },
+      "cantonese": {
+        "characters_traditional": "放過自己",
+        "jyutping": "Fong3 gwo3 zi6 gei2"
+      },
+      "english": "Let yourself go.",
+      "context": "A reminder to let go of stress and tension.",
+      "tags": ["self-care","relaxation"],
+      "vetted_by": "",
+      "created_at": "2026-01-30T00:00:00Z",
+      "audio": { "mandarin_url": "", "cantonese_url": "" }
     }
   ]
 }
