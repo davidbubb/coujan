@@ -10,7 +10,13 @@ Run locally:
 
 3. Open http://localhost:5173 (or the URL shown by Vite)
 
-Deployed to GitHub pages
+Deploy to GitHub Pages:
+
+1. Push to `main` on GitHub.
+2. In GitHub, go to Settings → Pages.
+3. Under “Build and deployment,” set Source to “GitHub Actions.”
+4. Wait for the workflow to finish; your site will be at:
+   https://davidbubb.github.io/calm_app/
 
 Notes:
 - TTS uses your browser's Web Speech API. Cantonese voice availability varies by browser/OS — if none available, the browser may fallback to a Mandarin voice.
