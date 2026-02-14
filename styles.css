@@ -435,9 +435,6 @@ body.theme-ocean {
   --text-secondary: #1565c0;
   --border-color: #b3e5fc;
   --shadow: rgba(0, 188, 212, 0.15);
-}
-
-body.theme-ocean {
   background: linear-gradient(180deg, #e0f2f7, #b3e5fc);
 }
 
@@ -455,9 +452,6 @@ body.theme-sunset {
   --text-secondary: #f57c00;
   --border-color: #ffe0b2;
   --shadow: rgba(255, 152, 0, 0.15);
-}
-
-body.theme-sunset {
   background: linear-gradient(180deg, #fff3e0, #ffccbc);
 }
 
@@ -475,9 +469,6 @@ body.theme-purple {
   --text-secondary: #6a1b9a;
   --border-color: #e1bee7;
   --shadow: rgba(171, 71, 188, 0.15);
-}
-
-body.theme-purple {
   background: linear-gradient(180deg, #f3e5f5, #e1bee7);
 }
 
@@ -495,9 +486,6 @@ body.theme-neon {
   --text-secondary: #ff6b9d;
   --border-color: #0f3460;
   --shadow: rgba(0, 255, 136, 0.25);
-}
-
-body.theme-neon {
   background: linear-gradient(180deg, #1a1a2e, #0f3460);
 }
 
@@ -520,9 +508,6 @@ body.theme-tropical {
   --text-secondary: #388e3c;
   --border-color: #c8e6c9;
   --shadow: rgba(102, 187, 106, 0.15);
-}
-
-body.theme-tropical {
   background: linear-gradient(180deg, #e8f5e9, #c8e6c9);
 }
 
@@ -540,9 +525,6 @@ body.theme-cherry {
   --text-secondary: #c2185b;
   --border-color: #f8bbd0;
   --shadow: rgba(236, 64, 122, 0.15);
-}
-
-body.theme-cherry {
   background: linear-gradient(180deg, #fce4ec, #f8bbd0);
 }
 
@@ -560,9 +542,6 @@ body.theme-aurora {
   --text-secondary: #5e35b1;
   --border-color: #c5cae9;
   --shadow: rgba(126, 87, 194, 0.15);
-}
-
-body.theme-aurora {
   background: linear-gradient(180deg, #e8eaf6, #c5cae9);
 }
 
