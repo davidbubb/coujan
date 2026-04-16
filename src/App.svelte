@@ -6,12 +6,28 @@
   // state
   let phrases = phrasesData.phrases || [];
   let index = 0;
+  let selectedTag = localStorage.getItem('selectedTag') || 'all';
+  let favoritesOnly = localStorage.getItem('favoritesOnly') === 'true';
   let showPinyin = true;
   let mandarinScript = localStorage.getItem('mandarinScript') || 'simplified'; // 'simplified' or 'traditional'
-  let reducedMotion = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) || false;
   let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
   let theme = localStorage.getItem('theme') || 'light';
   let animationsEnabled = localStorage.getItem('animationsEnabled') !== 'false'; // default to true
+  const themeClasses = ['theme-dark', 'theme-ocean', 'theme-sunset', 'theme-purple', 'theme-neon', 'theme-tropical', 'theme-cherry', 'theme-aurora'];
+
+  $: availableTags = Array.from(new Set(phrases.flatMap((phrase) => phrase.tags || []))).sort();
+  $: if (selectedTag !== 'all' && !availableTags.includes(selectedTag)) {
+    selectedTag = 'all';
+  }
+  $: filteredPhrases = phrases.filter((phrase) => {
+    const matchesFavorite = !favoritesOnly || favorites.includes(phrase.id);
+    const matchesTag = selectedTag === 'all' || (phrase.tags || []).includes(selectedTag);
+    return matchesFavorite && matchesTag;
+  });
+  $: if (index >= filteredPhrases.length) index = 0;
+  $: currentPhrase = filteredPhrases[index] || null;
+  $: localStorage.setItem('selectedTag', selectedTag);
+  $: localStorage.setItem('favoritesOnly', favoritesOnly.toString());
 
   function setMandarinScript(s) {
     mandarinScript = s;
@@ -32,17 +48,16 @@
 
   function updateBodyClass() {
     if (typeof document !== 'undefined') {
-      let classes = [];
-      if (theme !== 'light') classes.push(`theme-${theme}`);
-      if (!animationsEnabled) classes.push('animations-disabled');
-      document.body.className = classes.join(' ');
+      themeClasses.forEach((className) => document.body.classList.remove(className));
+      if (theme !== 'light') document.body.classList.add(`theme-${theme}`);
+      document.body.classList.toggle('animations-disabled', !animationsEnabled);
     }
   }
 
   function toggleFavorite(id) {
-    const i = favorites.indexOf(id);
-    if (i >= 0) favorites.splice(i,1);
-    else favorites.push(id);
+    favorites = favorites.includes(id)
+      ? favorites.filter((favoriteId) => favoriteId !== id)
+      : [...favorites, id];
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }
 
@@ -51,11 +66,13 @@
   }
 
   function next() {
-    index = (index + 1) % phrases.length;
+    if (!filteredPhrases.length) return;
+    index = (index + 1) % filteredPhrases.length;
     prefetchNext();
   }
   function prev() {
-    index = (index - 1 + phrases.length) % phrases.length;
+    if (!filteredPhrases.length) return;
+    index = (index - 1 + filteredPhrases.length) % filteredPhrases.length;
     prefetchNext();
   }
 
@@ -65,15 +82,15 @@
   }
 
   function playMandarin() {
-    const phrase = phrases[index];
-    const text = mandarinScript === 'simplified' ? phrase.mandarin.characters_simplified : phrase.mandarin.characters_traditional;
+    if (!currentPhrase) return;
+    const text = mandarinScript === 'simplified' ? currentPhrase.mandarin.characters_simplified : currentPhrase.mandarin.characters_traditional;
     // speak using Mandarin zh-CN
     ttsSpeak({ text, lang: 'zh-CN' });
   }
 
   function playCantonese() {
-    const phrase = phrases[index];
-    const text = phrase.cantonese.characters_traditional;
+    if (!currentPhrase) return;
+    const text = currentPhrase.cantonese.characters_traditional;
     // many browsers do not have 'yue' voices; try zh-HK / zh-CN fallback. Use 'yue' first.
     ttsSpeak({ text, lang: 'zh-HK' });
   }
@@ -119,14 +136,25 @@
           <option value="simplified">Simplified</option>
           <option value="traditional">Traditional</option>
         </select>
+        <label class="small" for="tag-filter">Tag</label>
+        <select id="tag-filter" bind:value={selectedTag}>
+          <option value="all">All tags</option>
+          {#each availableTags as tag}
+            <option value={tag}>{tag}</option>
+          {/each}
+        </select>
+        <label class="small">
+          <input type="checkbox" bind:checked={favoritesOnly} /> Favorites only
+        </label>
         <label class="small">
           <input type="checkbox" bind:checked={showPinyin} /> Show romanization
         </label>
       </div>
 
       <div class="right-controls">
-        <button class="fav" on:click={() => toggleFavorite(phrases[index].id)} aria-pressed={isFavorite(phrases[index].id)}>
-          {#if isFavorite(phrases[index].id)}
+        <div class="count" aria-live="polite">{filteredPhrases.length} / {phrases.length} phrases</div>
+        <button class="fav" on:click={() => currentPhrase && toggleFavorite(currentPhrase.id)} aria-pressed={currentPhrase ? isFavorite(currentPhrase.id) : false} disabled={!currentPhrase}>
+          {#if currentPhrase && isFavorite(currentPhrase.id)}
             ★ Favorited
           {:else}
             ☆ Favorite
@@ -142,40 +170,47 @@
       </div>
     </div>
 
-    <div class="languages">
-      <div class="col mandarin" aria-label="Mandarin column">
-        <div class="label">Mandarin</div>
-        <div class="chars">
-          {#if mandarinScript === 'simplified'}
-            {@html phrases[index].mandarin.characters_simplified}
-          {:else}
-            {@html phrases[index].mandarin.characters_traditional}
+    {#if currentPhrase}
+      <div class="languages">
+        <div class="col mandarin" aria-label="Mandarin column">
+          <div class="label">Mandarin</div>
+          <div class="chars">
+            {#if mandarinScript === 'simplified'}
+              {currentPhrase.mandarin.characters_simplified}
+            {:else}
+              {currentPhrase.mandarin.characters_traditional}
+            {/if}
+          </div>
+          {#if showPinyin}
+            <div class="romanization">{currentPhrase.mandarin.pinyin}</div>
           {/if}
+          <button class="play" on:click={playMandarin} aria-label="Play Mandarin">🔊</button>
         </div>
-        {#if showPinyin}
-          <div class="romanization">{phrases[index].mandarin.pinyin}</div>
-        {/if}
-        <button class="play" on:click={playMandarin} aria-label="Play Mandarin">🔊</button>
+
+        <div class="col cantonese" aria-label="Cantonese column">
+          <div class="label">Cantonese</div>
+          <div class="chars">{currentPhrase.cantonese.characters_traditional}</div>
+          {#if showPinyin}
+            <div class="romanization">{currentPhrase.cantonese.jyutping}</div>
+          {/if}
+          <button class="play" on:click={playCantonese} aria-label="Play Cantonese">🔊</button>
+        </div>
       </div>
 
-      <div class="col cantonese" aria-label="Cantonese column">
-        <div class="label">Cantonese</div>
-        <div class="chars">{@html phrases[index].cantonese.characters_traditional}</div>
-        {#if showPinyin}
-          <div class="romanization">{phrases[index].cantonese.jyutping}</div>
-        {/if}
-        <button class="play" on:click={playCantonese} aria-label="Play Cantonese">🔊</button>
+      <div class="english" aria-live="polite">
+        <div class="translation">{currentPhrase.english}</div>
+        <div class="context">{currentPhrase.context}</div>
       </div>
-    </div>
-
-    <div class="english" aria-live="polite">
-      <div class="translation">{phrases[index].english}</div>
-      <div class="context">{phrases[index].context}</div>
-    </div>
+    {:else}
+      <div class="english" aria-live="polite">
+        <div class="translation">No phrases match the current filters.</div>
+        <div class="context">Try another tag or turn off Favorites only.</div>
+      </div>
+    {/if}
 
     <div class="controls">
-      <button on:click={prev} aria-label="Previous phrase">← Prev</button>
-      <button on:click={next} aria-label="Next phrase">Next →</button>
+      <button on:click={prev} aria-label="Previous phrase" disabled={!currentPhrase}>← Prev</button>
+      <button on:click={next} aria-label="Next phrase" disabled={!currentPhrase}>Next →</button>
     </div>
 
     <div class="theme-controls">

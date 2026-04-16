@@ -8,6 +8,13 @@ Run locally:
 2. Start dev server
    npm run dev
 
+Data checks:
+
+- Validate phrase data before shipping changes:
+   npm run data:check
+- Phrase source of truth:
+   src/data/phrases.mvp.json
+
 3. Open http://localhost:5173 (or the URL shown by Vite)
 
 Deploy to GitHub Pages:

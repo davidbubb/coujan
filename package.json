@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build"
+    "deploy": "vite build",
+    "data:check": "node scripts/validate-phrases.mjs"
   },
   "dependencies": {
     "svelte": "^4.0.0"
