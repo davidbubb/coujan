@@ -487,24 +487,6 @@
       "audio": { "mandarin_url": "", "cantonese_url": "" }
     },
     {
-      "id": "phrase-033",
-      "mandarin": {
-        "characters_simplified": "我比KATSEYE的女生更漂亮",
-        "characters_traditional": "我比KATSEYE的女生更漂亮",
-        "pinyin": "wǒ bǐ KATSEYE de nǚ shēng gèng piào liang"
-      },
-      "cantonese": {
-        "characters_traditional": "我比KATSEYE啲女仔更靚",
-        "jyutping": "ngo5 bei2 KATSEYE di1 neoi5 zai2 gang3 leng3"
-      },
-      "english": "I am prettier than the KATSEYE girls",
-      "context": "A playful confidence affirmation using a pop-culture comparison.",
-      "tags": ["affirmation","confidence","playful"],
-      "vetted_by": "",
-      "created_at": "2026-04-16T00:00:00Z",
-      "audio": { "mandarin_url": "", "cantonese_url": "" }
-    },
-    {
       "id": "phrase-034",
       "mandarin": {
         "characters_simplified": "身体健康，长命百岁",
